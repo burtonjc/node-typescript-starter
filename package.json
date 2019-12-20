@@ -1,0 +1,40 @@
+{
+  "name": "node-typescript-starter",
+  "version": "1.0.0",
+  "description": "Generic starter project for Node.js using TypeScript and Jest.",
+  "main": ".build/index.js",
+  "scripts": {
+    "build": "npx tsc",
+    "clean": "rm -rf .build",
+    "format": "npx prettier --write \"src/**/*.ts\" \"src/**/*.js\"",
+    "lint": "npx tslint -p tsconfig.json",
+    "prebuild": "npm run clean",
+    "prepare": "npm run build",
+    "test": "npx jest --config jestconfig.json"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RallySoftware/node-typescript-starter.git"
+  },
+  "author": "",
+  "license": "UNLICENSED",
+  "bugs": {
+    "url": "https://github.com/RallySoftware/node-typescript-starter/issues"
+  },
+  "files": [
+    ".build/**/*"
+  ],
+  "homepage": "https://github.com/RallySoftware/node-typescript-starter#readme",
+  "devDependencies": {
+    "@types/jest": "^24.0.24",
+    "jest": "^24.9.0",
+    "prettier": "^1.19.1",
+    "ts-jest": "^24.2.0",
+    "tslint": "^5.20.1",
+    "tslint-config-prettier": "^1.18.0",
+    "typescript": "^3.7.3"
+  },
+  "dependencies": {
+    "@types/node": "^12.12.21"
+  }
+}
